@@ -1026,7 +1026,7 @@ Class dzn_baseClassToSwizzleForTarget(id target)
     UIView *hitView = [super hitTest:point withEvent:event];
     
     // Return any UIControl instance such as buttons, segmented controls, switches, etc.
-    if ([hitView isKindOfClass:[UIControl class]]) {
+    if ([hitView isKindOfClass:[UIControl class]] || [hitView isKindOfClass:[UITextView class]]) {
         return hitView;
     }
     
